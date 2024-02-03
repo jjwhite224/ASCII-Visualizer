@@ -226,8 +226,12 @@ function playSound(){
     clear();
     gifnum += 1;
     gifvid.remove();
-    gifvid=createVideo(gifarray[gifnum],playVid);
+    gifvid=createVideo(gifarray[gifnum],vidloaded);
     gifvid.hide();
+    if (vidloaded == true){
+      playVid();
+    }
+    
     
   }
     //const video = document.getElementsByTagName("video");
