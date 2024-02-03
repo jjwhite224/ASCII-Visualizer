@@ -235,7 +235,11 @@ function playSound(){
 
   function nextgif(){
     //gifnum += 1;
-    
+    clear();
+    gifnum += 1;
+    gifvid.remove();
+    gifvid=createVideo(gifarray[gifnum],playVid);
+    gifvid.hide();
   }
     //const video = document.getElementsByTagName("video");
     //console.log(video)
