@@ -203,15 +203,7 @@ function playVid(){
    if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer --;
   if (timer == 0) {
-    newgif = createVideo(gifarray[floor(random(gifarray.length))],function(){
-      if (vidloaded == true){
-    newgif.hide()
-    clear();
-    gifvid.remove()
-    gifvid = newgif
-    gifvid.play();
-      }
-    })
+    newgif = createVideo(gifarray[floor(random(gifarray.length))],function(){nextgif();})
   }
    }
  }
@@ -235,13 +227,12 @@ function playSound(){
 
   function nextgif(){
     //gifnum += 1;
-    if (vidloaded == true){
     clear();
     gifnum += 1;
     gifvid.remove();
     gifvid=createVideo(gifarray[gifnum],playVid);
     gifvid.hide();
-    }
+    
   }
     //const video = document.getElementsByTagName("video");
     //console.log(video)
