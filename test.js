@@ -234,6 +234,7 @@ function playSound(){
     gifvid.hide();
     if (vidloaded == true){
       playVid();
+      console.log(gifvid);
     }
     
     
