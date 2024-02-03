@@ -203,11 +203,7 @@ function playVid(){
    if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer --;
   if (timer == 0) {
-newgif = createVideo(gifarray[floor(random(gifarray.length))],function(){if (vidloaded==true){nextgif();}}
-  }
- }
- }
-}
+nextgif();}}}}
 
 function playSound(){
     if (audioloaded == true && soundPlaying == false){
