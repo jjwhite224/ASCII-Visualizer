@@ -103,8 +103,8 @@ function draw(){
   gifvid.playbackRate = map(amp,0,1,0,0.5);
   //fill('hsb('+str(map(bass,0,255,0,360))+str(map(mid,0,255,0,100))+str(map(mid,0,255,0,100))+')');
   songColor  = color(random(hueVar),random(sat),bright)
-  asciibass=map(map,0,1,0,windowHeight/10)
-  asciitreble=map(amp,0,1,0,windowWidth/10)
+  asciibass=map(amp,0,1,0,windowHeight)
+  asciitreble=map(amp,0,1,0,windowWidth)
   textFont('monospace', map(amp,0,1,4,20))
   //textFont('monospace',12)
   //console.log([bass,mid,treble,asciibass,asciitreble])
